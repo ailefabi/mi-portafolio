@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Artístico de Ailen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="menu">
+  <a href="#galeria">Galería de la U</a>
+  <a href="#personal">Arte Personal</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+
+  <header class="hero">
+    <img src="imagenes/perfil.png" alt="Foto de perfil de Ailen" class="perfil" />
+    <h1>¡Hola, soy Ailen!</h1>
+    <p>Estudiante de Informática y Tecnología Multimedia. Aquí te comparto algunos de mis dibujos / proyectos favoritos.</p>
+    <a href="#galeria" class="boton">Ver mis dibujos</a>
+  </header>
+
+  <section id="galeria" class="seccion">
+    <h2>Mi Galería de la U</h2>
+    <div class="galeria">
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/dibujo1.png', 'Ilustración para la actividad creativa en Humanidades II.')">
+        <img src="imagenes/dibujo1.png" alt="Dibujo 1" />
+        <p>Ilustración para la actividad creativa en Humanidades II.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/dibujo2.jpg', 'Dibujo de una bruja donde practicamos elementos para Expresión Artística a través del dibujo.')">
+        <img src="imagenes/dibujo2.jpg" alt="Dibujo 2" />
+        <p>Dibujo de una bruja donde practicamos elementos para Expresión Artística a través del dibujo.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/dibujo3.jpg', 'Diseño de mi proyecto para personaje de videojuego.')">
+        <img src="imagenes/dibujo3.jpg" alt="Dibujo 3" />
+        <p>Diseño de mi proyecto para personaje de videojuego.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/dibujo4.jpg', 'Diseño del personaje para el proyecto de laberinto.')">
+        <img src="imagenes/dibujo4.jpg" alt="Dibujo 4" />
+        <p>Diseño del personaje para el proyecto de laberinto.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/dibujo5.png', 'Dibujo para el tema del acoso en Manipulación de la Imagen.')">
+        <img src="imagenes/dibujo5.png" alt="Dibujo 5" />
+        <p>Dibujo para el tema del acoso en Manipulación de la Imagen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="personal" class="seccion">
+    <h2>Mi Arte Personal</h2>
+    <div class="galeria">
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/personal1.png', 'Dibujo de mi personaje Berrie como si fuese un personaje de Genshin Impact.')">
+        <img src="imagenes/personal1.png" alt="Dibujo personal 1" />
+        <p>Dibujo de mi personaje Berrie como si fuese un personaje de Genshin Impact.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/personal2.png', 'Fanart de Kimi ni Todoke, un anime que me gusta mucho.')">
+        <img src="imagenes/personal2.png" alt="Dibujo personal 2" />
+        <p>Fanart de Kimi ni Todoke, un anime que me gusta mucho.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/personal3.png', 'Fanart de Boku no Hero, Ochako Uraraka.')">
+        <img src="imagenes/personal3.png" alt="Dibujo personal 3" />
+        <p>Fanart de Boku no Hero, Ochako Uraraka.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/personal4.png', 'Dibujo de mi personaje Alexánder en una explosión de sentimientos.')">
+        <img src="imagenes/personal4.png" alt="Dibujo personal 4" />
+        <p>Dibujo de mi personaje Alexánder en una explosión de sentimientos.</p>
+      </div>
+      <div class="tarjeta" onclick="abrirLightbox('imagenes/personal5.png', 'Fanart de Seokjin de BTS, su nuevo álbum Echo.')">
+        <img src="imagenes/personal5.png" alt="Dibujo personal 5" />
+        <p>Fanart de Seokjin de BTS, su nuevo álbum Echo.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="habilidades" class="seccion">
+  <h2>Mis Habilidades</h2>
+  <ul class="lista-habilidades">
+    <li>🌸 Ilustración digital. </li>
+    <li>🌸 Diseño de personajes y fanart. </li>
+    <li>🌸 Creatividad. </li>
+  </ul>
+</section>
+
+<section id="contacto" class="seccion">
+  <h2>Contacto</h2>
+  <p>¿Te gustó mi trabajo? Podés comisionar en:</p>
+  <p><a href="https://instagram.com/fabipple" target="_blank" class="instagram">Instagram: @fabipple</a></p>
+  <p><a href="mailto:fabianasalazar2502@gmail.com" class="correo">fabianasalazar2502@gmail.com</a></p>
+  <p><a href="tel:+50689984311" class="numero">Teléfono: 89984311</a></p>
+</section>
+
+  <footer>
+    <p>🌸 mi pequeño portafolio con mucho cariño 🌸</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+        <span class="cerrar" onclick="cerrarLightbox()">×</span>
+      <img id="lightbox-img" src="" alt="Imagen ampliada" />
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+
+  <script src="portafolio.js"></script>
+</body>
+</html>
